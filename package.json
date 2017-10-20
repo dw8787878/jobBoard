@@ -1,7 +1,7 @@
 {
-  "name": "__BONES_NEEDS_A_NAME__",
+  "name": "jobBoard",
   "version": "0.0.1",
-  "description": "A happy little skeleton.",
+  "description": "A job board",
   "main": "index.js",
   "engines": {
     "node": ">= 7.0.0"
@@ -27,19 +27,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queerviolet/bones.git"
+    "url": "git+https://github.com/dw8787878/jobBoard"
   },
   "keywords": [
     "react",
     "redux",
     "skeleton"
   ],
-  "author": "Ashi Krishnan <me@ashi.works>",
+  "author": "Darryn Wu",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/queerviolet/bones/issues"
-  },
-  "homepage": "https://github.com/queerviolet/bones#readme",
   "dependencies": {
     "axios": "^0.15.2",
     "babel-preset-stage-2": "^6.18.0",
