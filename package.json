@@ -1,5 +1,5 @@
 {
-  "name": "jobBoard",
+  "name": "jobboard",
   "version": "0.0.1",
   "description": "A job board",
   "main": "index.js",

@@ -13,33 +13,15 @@ import {Provider, connect} from 'react-redux'
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 
 import store from './store'
-import Jokes from './components/Jokes'
+import Main from './components/Main'
 import Login from './components/Login'
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 
-const ExampleApp = connect(
-  ({ auth }) => ({ user: auth })
-)(
-  ({ user, children }) =>
-    <div>
-      <nav>
-        {user ? <WhoAmI/> : <Login/>}
-      </nav>
-      <main>
-        <Switch>
-          <Route path="/jokes" component={Jokes} />
-          <Redirect exact from="/" to="/jokes" />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-    </div>
-)
-
 render(
   <Provider store={store}>
     <Router>
-      <ExampleApp />
+      <Main />
     </Router>
   </Provider>,
   document.getElementById('main')
