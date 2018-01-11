@@ -16,8 +16,9 @@
     "build-watch": "npm run build -- -w",
     "build-dev": "cross-env NODE_ENV=development npm run build-watch",
     "build-branch": "bin/build-branch.sh",
+    "build-css": "node-sass -w assets/stylesheets/shoestring.scss -o public/stylesheets",
     "start": "node server/start.js",
-    "start-watch": "nodemon server/start.js --watch server --watch db --watch index.js --watch package.json",
+    "start-watch": "nodemon server/start.js --watch server --watch db --watch index.js --watch package.json -e css,scss",
     "start-dev": "cross-env NODE_ENV=development npm run start-watch",
     "test": "mocha --compilers js:babel-register --require babel-polyfill --watch-extensions js,jsx app/**/*.test.js app/**/*.test.jsx server/**/*.test.js db/**/*.test.js",
     "test-watch": "npm run test -- --watch --reporter=min",
@@ -32,15 +33,15 @@
   "keywords": [
     "react",
     "redux",
-    "skeleton"
+    "jobBoard"
   ],
   "author": "Darryn Wu",
-  "license": "MIT",
   "dependencies": {
     "axios": "^0.15.2",
     "babel-preset-stage-2": "^6.18.0",
     "bcryptjs": "^2.4.0",
     "body-parser": "^1.15.2",
+    "bulma": "^0.6.1",
     "chai-enzyme": "^0.5.2",
     "chalk": "^1.1.3",
     "check-node-version": "^1.1.2",
@@ -50,6 +51,7 @@
     "express": "^4.14.0",
     "finalhandler": "^1.0.0",
     "homedir": "^0.6.0",
+    "node-sass": "^4.7.2",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-github2": "^0.1.10",
@@ -93,7 +95,7 @@
     "nodemon": "^1.11.0",
     "supertest": "^3.0.0",
     "volleyball": "^1.4.1",
-    "webpack": "^2.2.1",
+    "webpack": "^2.7.0",
     "webpack-livereload-plugin": "^0.10.0"
   }
 }

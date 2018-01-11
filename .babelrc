@@ -7,7 +7,7 @@
         "node": "current"
       },
       "debug": false, // `true` outputs which plugins are used and why
-      "useBuiltIns": true // reduces `babel-polyfill` in `main.jsx` to a subset of polyfills
+      "useBuiltIns": true // reduces `babel-polyfill` in `main.jsx` to a subset of polyfills to polyfill only the last 2 versions.  Essentially optimizing our polyfill.
     }],
     "stage-2"
   ]
