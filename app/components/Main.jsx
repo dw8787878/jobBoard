@@ -12,7 +12,7 @@ import NavBar from './NavBar'
 
 class Main extends Component {
   render() {
-    console.log("this is auth: ", this.auth)
+    console.log("this is auth: ", this.props.auth)
     return (
             <div>
                 <NavBar />

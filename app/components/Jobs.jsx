@@ -16,6 +16,7 @@ class Jobs extends Component{
     this.props.loadAllJobs()
   }
   render(){
+    console.log('this.props.jobs:',this.props.jobs)
     return(
       <div>
       </div>
