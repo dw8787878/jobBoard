@@ -4,9 +4,9 @@ import 'babel-polyfill'
 
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import { Connect, Provider } from 'react-redux'
+import { connect, Provider } from 'react-redux'
 
-import { fetchJobs } from '../reducers/fetchJobs'
+import { fetchJobs } from '../reducers/jobs'
 
 class Jobs extends Component{
   constructor(props){

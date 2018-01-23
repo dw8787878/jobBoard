@@ -5,9 +5,9 @@ import 'babel-polyfill'
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { Provider, connect } from 'react-redux'
-// import { NavLink, withRouter } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 
-class NavBar extends Component {
+export class NavBar extends Component {
   constructor(props){
     super(props)
   }
