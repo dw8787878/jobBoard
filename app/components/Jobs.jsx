@@ -17,8 +17,10 @@ class Jobs extends Component{
   }
   render(){
     console.log('this.props.jobs:',this.props.jobs)
+    console.log("we renderin jobs...")
     return(
       <div>
+        these are the jobs...
       </div>
     )
   }
@@ -33,6 +35,7 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = function(dispatch) {
   return {
     loadAllJobs: () => {
+      console.log('dispatchin...')
       dispatch(fetchJobs())
     }
   }
