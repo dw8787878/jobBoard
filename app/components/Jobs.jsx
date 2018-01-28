@@ -8,6 +8,8 @@ import { connect, Provider } from 'react-redux'
 
 import { fetchJobs } from '../reducers/jobs'
 
+import store from '../store.jsx'
+
 class Jobs extends Component{
   constructor(props){
     super(props)
@@ -35,13 +37,11 @@ const mapStateToProps = function(state) {
 const mapDispatchToProps = function(dispatch) {
   return {
     loadAllJobs: () => {
-      console.log('dispatchin...')
       dispatch(fetchJobs())
     }
   }
 }
 
-const jobsListContainer = connect(mapStateToProps, mapDispatchToProps)(Jobs)
+export default connect(mapStateToProps, mapDispatchToProps)(Jobs)
 
-export default jobsListContainer
 

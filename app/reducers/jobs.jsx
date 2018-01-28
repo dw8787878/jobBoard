@@ -30,22 +30,17 @@ const reducer = (state=[], action) => {
 //       dispatch(getJobs(jobs))
 //     })
 
-// export function fetchJobs() {
-//   console.log('THUUUNK...')
-//   return function thunk(dispatch) {
-//     return axios.get('/api/jobs')
-//       .then(jobs =>{
-//         console.log('THESE ARE THE JOBS:', jobs)
-//         const action = getJobs(jobs)
-//         dispatch(action)
-//       })
-//   }
-// }
-
-export const fetchJobs = () => {
+export function fetchJobs() {
   console.log('THUUUNK...')
-
-
+  return function thunk(dispatch) {
+    return axios.get('/api/jobs')
+      .then(jobs =>{
+        const action = getJobs(jobs)
+        dispatch(action)
+      })
+  }
 }
+
+
 
 export default reducer;

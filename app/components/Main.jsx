@@ -7,15 +7,18 @@ import { render } from 'react-dom'
 import { Provider, connect } from 'react-redux'
 // import { BroswerRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
-// import NavBar from './NavBar'
+import store from '../store.jsx'
+import NavBar from './NavBar'
 import Jobs from './Jobs'
+import { fetchJobs } from '../reducers/jobs'
 
 
 class Main extends Component {
   render() {
-    console.log("this is auth: ", this.props.auth)
+
     return (
             <div>
+                <NavBar />
                 <Jobs />
             </div>
     )
@@ -32,6 +35,5 @@ const mapDispatchToProps = function(dispatch) {
   return {}
 }
 
-const mainContainer = connect(mapStateToProps, mapDispatchToProps)(Main)
+export default connect(mapStateToProps, mapDispatchToProps)(Main)
 
-export default mainContainer
