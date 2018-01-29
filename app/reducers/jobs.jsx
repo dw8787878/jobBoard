@@ -30,13 +30,16 @@ const reducer = (state=[], action) => {
 //       dispatch(getJobs(jobs))
 //     })
 
-export function fetchJobs() {
+export const fetchJobs = () => dispatch => {
   console.log('THUUUNK...')
-  return function thunk(dispatch) {
+
+  return function(dispatch) {
     return axios.get('/api/jobs')
-      .then(jobs =>{
+      .then(jobs => {
         const action = getJobs(jobs)
         dispatch(action)
+      }).catch(error => {
+        console.error('Fetching jobs unsuccessful', err)
       })
   }
 }

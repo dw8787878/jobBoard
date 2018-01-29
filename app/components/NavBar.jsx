@@ -16,7 +16,7 @@ export class NavBar extends Component {
 
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="localhost:1337">
+        <a className="navbar-item" href="/">
 
           <img src="https://i.imgur.com/hOT1nFL.jpg" alt="Genius Talent Gofer" width="112" height="91" />
         </a>
@@ -32,19 +32,19 @@ export class NavBar extends Component {
       </div>
 
       <div className="navbar-start">
-        <a className="navbar-item" href="/#Login">
+        <a className="navbar-item" href="/Login">
           Login
         </a>
-        <a className="navbar-item" href="/#CurrentJobs">
+        <a className="navbar-item" href="/">
           Current Jobs
         </a>
-        <a className="navbar-item" href="/#AdvanceSearch">
+        <a className="navbar-item" href="/AdvanceSearch">
           Advanced Search Jobs
         </a>
-        <a className="navbar-item" href="/#Login">
+        <a className="navbar-item" href="/Login">
           Company Login
         </a>
-        <a className="navbar-item" href="/#FAQ">
+        <a className="navbar-item" href="/FAQ">
           FAQ
         </a>
         <a className="navbar-item" href="/#Contact">

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Main from './Main'
 // import NavBar from './NavBar'
-import Jobs from './Jobs'
+//import Jobs from './Jobs'
 
 import { fetchJobs } from '../reducers/jobs'
 import store from '../store.jsx'
@@ -23,7 +23,8 @@ class Routes extends Component {
 
 const mapStateToProps = function(state) {
   return {
-    auth: state.auth
+    auth: state.auth,
+    jobs: state.jobs
   }
 }
 

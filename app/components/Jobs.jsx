@@ -14,12 +14,12 @@ class Jobs extends Component{
   constructor(props){
     super(props)
   }
-  componenentDidMount() {
+  componentDidMount() {
     this.props.loadAllJobs()
   }
   render(){
+    console.log('here....')
     console.log('this.props.jobs:',this.props.jobs)
-    console.log("we renderin jobs...")
     return(
       <div>
         these are the jobs...
@@ -28,9 +28,10 @@ class Jobs extends Component{
   }
 }
 
-const mapStateToProps = function(state) {
+const mapStateToProps = function(state, ownProps) {
+  const jobs = ownProps.jobs || state.jobs
   return {
-    jobs: state.jobs
+    jobs
   }
 }
 
