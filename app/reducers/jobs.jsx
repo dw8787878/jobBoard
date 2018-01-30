@@ -22,28 +22,28 @@ const reducer = (state=[], action) => {
 }
 
 //thunks:
-// export const fetchJobs = () =>
-//   dispatch =>
-//     axios.get('/api/jobs')
-//     .then((res) => res.data)
-//     .then((jobs) => {
-//       dispatch(getJobs(jobs))
-//     })
+export const fetchJobs = () =>
+  dispatch =>
+    axios.get('/api/jobs')
+    .then((res) => res.data)
+    .then((jobs) => {
+      dispatch(getJobs(jobs))
+    }).catch(err => {
+      console.error('Fetching jobs unsuccessful', err)
+    })
 
-export const fetchJobs = () => dispatch => {
-  console.log('THUUUNK...')
+// export const fetchJobs = () => dispatch => {
+//   console.log('THUUUNK...')
 
-  return function(dispatch) {
-    return axios.get('/api/jobs')
-      .then(jobs => {
-        const action = getJobs(jobs)
-        dispatch(action)
-      }).catch(error => {
-        console.error('Fetching jobs unsuccessful', err)
-      })
-  }
-}
-
-
+//   return function(dispatch) {
+//     return axios.get('/api/jobs')
+//       .then(jobs => {
+//         const action = getJobs(jobs)
+//         dispatch(action)
+//       }).catch(error => {
+//         console.error('Fetching jobs unsuccessful', err)
+//       })
+//   }
+// }
 
 export default reducer;

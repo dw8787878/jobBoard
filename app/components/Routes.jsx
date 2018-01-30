@@ -23,8 +23,7 @@ class Routes extends Component {
 
 const mapStateToProps = function(state) {
   return {
-    auth: state.auth,
-    jobs: state.jobs
+    auth: state.auth
   }
 }
 

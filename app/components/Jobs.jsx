@@ -20,12 +20,30 @@ class Jobs extends Component{
   render(){
     console.log('here....')
     console.log('this.props.jobs:',this.props.jobs)
+    const jobs = this.props.jobs
     return(
       <div>
-        these are the jobs...
+        <div className="section">
+          <div className="container">
+            <h1 className="title" id="AllJobs">Jobs in US</h1>
+            <hr />
+            <table className="table is-fullwidth is-striped">
+              <tbody>
+              {
+                jobs.map((job, index) => (
+                  <tr key={job.id}>
+                    <td>{job.title}</td>
+                  </tr>
+                ))
+              }
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     )
   }
+
 }
 
 const mapStateToProps = function(state, ownProps) {
