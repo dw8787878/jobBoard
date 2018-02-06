@@ -11,3 +11,9 @@ module.exports = require('express').Router()
   .then(companies => res.json(companies))
   .catch(next)
 )
+  .get('/:id',
+  (req, res, next) =>
+    Companies.findById(req.params.id)
+    .then(company => res.json(company))
+    .catch(next)
+)

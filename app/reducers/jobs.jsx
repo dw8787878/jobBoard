@@ -32,18 +32,6 @@ export const fetchJobs = () =>
       console.error('Fetching jobs unsuccessful', err)
     })
 
-// export const fetchJobs = () => dispatch => {
-//   console.log('THUUUNK...')
 
-//   return function(dispatch) {
-//     return axios.get('/api/jobs')
-//       .then(jobs => {
-//         const action = getJobs(jobs)
-//         dispatch(action)
-//       }).catch(error => {
-//         console.error('Fetching jobs unsuccessful', err)
-//       })
-//   }
-// }
 
 export default reducer;

@@ -7,6 +7,14 @@ module.exports = db => db.define('job', {
     type: DataTypes.STRING,
     allowNull: false
   },
+  companyId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  companyName: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
   description: {
     type: DataTypes.STRING
   },
