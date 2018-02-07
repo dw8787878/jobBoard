@@ -29,10 +29,21 @@ class Jobs extends Component{
             <hr />
             <table className="table is-fullwidth is-striped">
               <tbody>
+                <tr>
+                  <td>Title</td>
+                  <td>Company Name</td>
+                  <td>Description</td>
+                  <td>City</td>
+                  <td>State</td>
+                </tr>
               {
                 jobs.map((job, index) => (
                   <tr key={job.id}>
                     <td>{job.title}</td>
+                    <td>{job.companyName}</td>
+                    <td>{job.description}</td>
+                    <td>{job.city}</td>
+                    <td>{job.state}</td>
                   </tr>
                 ))
               }

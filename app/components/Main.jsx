@@ -8,7 +8,6 @@ import { Provider, connect } from 'react-redux'
 // import { BroswerRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 import store from '../store.jsx'
-import NavBar from './NavBar'
 import Jobs from './Jobs'
 import { fetchJobs } from '../reducers/jobs'
 
@@ -18,7 +17,6 @@ class Main extends Component {
 
     return (
             <div>
-                <NavBar />
                 <Jobs />
             </div>
     )
